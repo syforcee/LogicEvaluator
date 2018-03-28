@@ -1,0 +1,15 @@
+Special char: |,&,=>,!,(,)
+Supported variable char: basicallly any except above
+
+operators: |, &, =>
+
+
+var -> ), operator
+
+operator-> !, var
+
+( -> var, ), !
+
+) -> operator, )
+
+! -> var,(
