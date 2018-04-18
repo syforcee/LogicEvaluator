@@ -1,4 +1,3 @@
-import checkerLEGACY
 import Parser
 
 class Function:

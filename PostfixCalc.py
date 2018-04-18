@@ -169,15 +169,16 @@ class PostfixCalc:
             andMark = False
             for i in range(len(exp)):
                 if exp[i]=='1':
-                    expression+=self.variables[i]
+                    if andMark:
+                        expression += ' & '
+                    expression += self.variables[i]
                     andMark=True
 
                 elif exp[i]=='0':
-                    expression+=('!'+self.variables[i])
+                    if andMark:
+                        expression += ' & '
+                    expression += ('!' + self.variables[i])
                     andMark=True
-                if andMark== True:
-                    #expression += ' & '
-                    andMark=False
 
             expression+=" | "
         expression=expression[:-2]
